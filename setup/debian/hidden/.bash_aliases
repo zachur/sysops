@@ -19,6 +19,10 @@ alias clearhist='history -c && history -w'
 alias google='fn() { google-chrome "https://www.google.com/search?q=$1";};fn'
 
 # Change directory to VSCode/VSCodium stage
-alias stg='cd ~/vsc/stg/'
+alias stg='function _stg() { cd ~/vsc/stg/"$1" || return 1; }; _stg'
 
+# Python aliases
 alias py='python3'
+
+# git aliases
+alias jpi='git add . && git commit -m "Changes" && git push'
